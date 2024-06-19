@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Travel Wishlist</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+        <!-- Sticky header with navigation bar with white text -->  
+    <header class="sticky-top bg-primary text-white">
+    <div class="container">
+      <h1>Travel Wishlist</h1>
+      <nav class="nav">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+        <!-- Dark mode toggle button -->
+        <button id="dark-mode-toggle" class="btn btn-dark ml-auto">Dark Mode</button>
+      </nav>
+    </div>
+  </header>
+  <!-- Main content container and form with labels -->
+  <main class="container mt-5">
+    <h2>Add a Destination</h2>
+    <form id="add-destination-form">
+      <div class="form-group">
+        <label for="destination-name">Destination Name</label>
+        <!-- Destination Name input field -->
+        <input type="text" class="form-control" id="destination-name" required>
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input type="text" class="form-control" id="description" required>
+      </div>
+       <!-- Submit button for adding destination -->
+      <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+
+    <h2 class="mt-5">Your Travel Destinations</h2>
+
+    <!-- Travel Destinations table -->
+    <table class="table" id="destination-table">
+      <thead>
+        <tr>
+            <!-- Table header for Destination Name with sorting -->
+          <th onclick="sortTable(0)">Destination Name</th>
+          <!-- Same for the description with sorting -->
+          <th onclick="sortTable(1)">Description</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Entries will be added here in a table body -->
+      </tbody>
+    </table>
+  </main>
+
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 Travel Wishlist. All rights reserved.</p>
+    <p>Follow us on <a href="#" class="text-white">Social Media</a></p>
+  </footer>
+    <!-- jQuery library  for later use-->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- Bootstrap JavaScript bundle -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
