@@ -10,3 +10,8 @@ body.dark-mode {
   .dark-mode .nav-link {
     color: #ffffff;
   }
+  /* Creating the exception because when dark mode toggles the text in the card is not visible because its whtie*/
+  .dark-mode .card {
+    background-color: #333;
+    color:#ffffff;
+  }
