@@ -1,6 +1,19 @@
+
+.abril-fatface-regular {
+  font-family: "Abril Fatface", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1, h2 {
+  font-family: "Abril Fatface";
+
+}
+
 body.dark-mode {
     background-color: #121212;
     color: #ffffff;
+
   }
 /* Dark mode background color for dark elements by refering the to each class */  
   .dark-mode .bg-dark {
@@ -13,5 +26,9 @@ body.dark-mode {
   /* Creating the exception because when dark mode toggles the text in the card is not visible because its whtie*/
   .dark-mode .card {
     background-color: #333;
+    color:#ffffff;
+  }
+
+  .dark-mode .table {
     color:#ffffff;
   }
