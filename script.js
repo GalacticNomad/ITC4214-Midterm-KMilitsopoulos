@@ -33,3 +33,21 @@ $(document).ready(function() {
       document.querySelector('body').classList.toggle('dark-mode');
     });
   });
+
+  // Sort Table Function 
+  function sortTable(columnIndex) {
+    // Get the table element
+    const table = document.querySelector('#destination-table');
+    
+    const rows = Array.from(table.querySelectorAll('tbody tr'));
+    // Sort the rows based on the column index
+    const sortedRows = rows.sort((a, b) => {
+      // Get the text content of the cells to compare
+      const cellA = a.cells[columnIndex].innerText.toLowerCase();
+      const cellB = b.cells[columnIndex].innerText.toLowerCase();
+      // Compare the cell values
+      return cellA.localeCompare(cellB);
+    });
+    // Re-append the sorted rows to the table body
+    sortedRows.forEach(row => table.querySelector('tbody').appendChild(row));
+  }
